@@ -23,12 +23,4 @@ express()
     const db = getFirestore();
     res.render('pages/index')
   })
-  .get('/retrievecryptoprices', (req, res) => {
-    console.log("retrieving crypto prices")
-
-    
-
-  })
-
-
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
