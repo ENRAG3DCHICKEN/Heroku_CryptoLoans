@@ -9,10 +9,12 @@ const serviceAccount = require("./cryptoloans-82f2d-firebase-adminsdk-rmitf-22c7
 
 const twilio = require('twilio');
 
+require("dotenv").config()
 
 
 const axios = require("axios");
 const { callbackify } = require('util');
+
 
 
 express()
@@ -43,7 +45,7 @@ express()
       'method': 'GET',
       'url': 'http://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest?symbol=eth,btc',
       'headers': {
-        'X-CMC_PRO_API_KEY': 'a3647fe0-fec6-47b5-8e13-e1758053cb89'
+        'X-CMC_PRO_API_KEY': process.env.X_CMC_PRO_API_KEY
       }
     };
 
