@@ -46,13 +46,11 @@ express()
         'X-CMC_PRO_API_KEY': 'a3647fe0-fec6-47b5-8e13-e1758053cb89'
       }
     };
-    // request(options, function (error, response) {
-    //   if (error) throw new Error(error);
-    //     console.log(response.body);
-    // });
+
     axios(options)
     .then(function (response) {
       console.log(JSON.stringify(response.data));
+      res.send(response.data)
     })
     .catch(function (error) {
       console.log(error);
